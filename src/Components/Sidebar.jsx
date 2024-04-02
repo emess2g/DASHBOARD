@@ -64,16 +64,13 @@ const Sidebar = () => {
   ];
 
   return (
-    <>
-      <div className="fixed z-1  left-0 bg-[#fcfcfc] w-[16%] h-[100%] ">
-       <div className="flex items-center  justify-between mt-10 p-3 bg-[orangered]">
-       <h1>Manage Bakery</h1>
-         <MdOutlineKeyboardArrowDown/>
-       </div>
+    <aside id='sidebar'>
+      <div className="fixed bg-[#fcfcfc] h-[100%] ">
+
         {data.map((val) => (
           <NavLink to={val.link}>
             <ul className="flex flex-col text-[15px] font-semibold text-nowrap" key={val.id}>
-              <div className="flex items-center justify-between  py-4  px-2" key={val.id}>
+              <div className="flex items-center justify-between  py-4  px-2">
                  <div className="flex items-center gap-1">
                  <p className="font-bold text-[20px] ">{val.icon}</p>
                 <h1>{val.name}</h1>
@@ -84,7 +81,7 @@ const Sidebar = () => {
           </NavLink>
         ))}
       </div>
-    </>
+    </aside>
   );
 };
 

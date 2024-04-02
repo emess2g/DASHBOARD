@@ -8,12 +8,12 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 
 
-const Navbar = () => {
+const Navbar = ({page}) => {
   return (
-    <div className="fixed top-0 left-0  right-0 flex sticky items-center justify-between py-4 px-6 bg-[#fcfcfc] shadow-md ">
+    <header className=" top-0 w-full flex  items-center justify-between py-4 px-6 bg-[#fcfcfc] shadow-md ">
      <div className="flex items-center font-semibold gap-4 justify-between w-[25%]"> 
-     <h2 className="text-[20px] font-bold"> 🧑🏿‍🍳 Mr <span className="text-[#f18056]">Cakes</span></h2>
-     <h1 className="text-[18px] opensans">Dashboard</h1>
+     <h2 className="text-[20px] font-bold text-nowrap"> 🧑🏿‍🍳 Mr <span className="text-[#f18056]">Cakes</span></h2>
+     <h1 className="text-[18px] opensans">{page}</h1>
      </div>
      <label className="flex gap-1 items-center border-[#8e8da1] border-2 rounded-xl py-1 px-2">
        <CiSearch className='text-[14px]'/>
@@ -32,7 +32,7 @@ const Navbar = () => {
             <MdOutlineKeyboardArrowDown/>
         </div>
      </div>
-    </div>
+    </header>
   )
 }
 
