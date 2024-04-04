@@ -1,12 +1,15 @@
 /* eslint-disable react/jsx-key */
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { CiGift } from "react-icons/ci";
-import { GiBackwardTime } from "react-icons/gi";
-import { MdOutlineLocalOffer } from "react-icons/md";
-import { MdStorefront } from "react-icons/md";
 import { HiUserGroup } from "react-icons/hi2";
+import { GiLovers } from "react-icons/gi";
+import { BsCalendar3Event} from "react-icons/bs";
+import { MdOutlineCampaign } from "react-icons/md";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { MdVolunteerActivism } from "react-icons/md";
+
+
+
 
 import { NavLink } from "react-router-dom";
 
@@ -17,50 +20,51 @@ const Sidebar = ({openSidebarToggle,  OpenSidebar }) => {
       icon: <LuLayoutDashboard />,
       name: "Dashboard",
       icon2: <MdKeyboardArrowRight />,
-      link: "/",
+      link: "/dashboard",
     },
     {
       id: 2,
-      icon: <GiBackwardTime />,
-      name: "Order History",
+      icon: <GiLovers />,
+      name: "All Donations",
       icon2: <MdKeyboardArrowRight />,
-      link: "/orderhistory",
+      link: "/alldonations",
     },
     {
+        id:3,
+        icon: <MdOutlineCampaign/>,
+        name: "Campaigns",
+        icon2: <MdKeyboardArrowRight/>,
+        link: "/campaigns"
+    }, 
+    {
         id:4,
-        icon: <MdOutlineLocalOffer/>,
-        name: "Offers",
+        icon: <BsCalendar3Event/>,
+        name: "Events",
         icon2: <MdKeyboardArrowRight/>,
-        link: "/offers"
+        link: "/events"
     }, 
     {
-        id:3,
-        icon: <MdStorefront/>,
-        name: "Manage Store",
+        id:5,
+        icon: <IoNewspaperOutline/>,
+        name: "Blog",
         icon2: <MdKeyboardArrowRight/>,
-        link: "/products"
+        link: "/blog"
     }, 
     {
-        id:3,
+        id:6,
+        icon: <MdVolunteerActivism/>,
+        name: "Volunteers",
+        icon2: <MdKeyboardArrowRight/>,
+        link: "/volunteers"
+    }, 
+    {
+        id:7,
         icon: <HiUserGroup/>,
-        name: "Employees",
+        name: "All Users",
         icon2: <MdKeyboardArrowRight/>,
-        link: "/employees"
+        link: "/allusers"
     }, 
-    {
-        id:3,
-        icon: '',
-        name: "Employees",
-        icon2: <MdKeyboardArrowRight/>,
-        link: "/manamgeusers"
-    }, 
-    {
-        id:3,
-        icon: '',
-        name: "Employees",
-        icon2: <MdKeyboardArrowRight/>,
-        link: "/manamgeusers"
-    }, 
+
   ];
 
  
