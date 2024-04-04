@@ -20,7 +20,7 @@ const Sidebar = ({openSidebarToggle,  OpenSidebar }) => {
       icon: <LuLayoutDashboard />,
       name: "Dashboard",
       icon2: <MdKeyboardArrowRight />,
-      link: "/dashboard",
+      link: "/",
     },
     {
       id: 2,
@@ -75,7 +75,7 @@ const Sidebar = ({openSidebarToggle,  OpenSidebar }) => {
 
   return (
     <aside id='sidebar' >
-      <div className={openSidebarToggle ? "hidden  lg:block fixed  z-10 mt-10 bg-[#fcfcfc] h-[100%]" : ' fixed  z-10  bg-[#fcfcfc] h-[100%] lg: block' }>
+      <div className={openSidebarToggle ? "hidden  lg:block fixed  z-10 mt-10 bg-[#fcfcfc] h-[100%]" : ' fixed  z-10  bg-[#fcfcfc] h-[100%] lg: fixed block mt-10' }>
 
         {data.map((val) => (
           <NavLink to={val.link} onClick={() => handleHidden()}>

@@ -1,19 +1,25 @@
 import { CiSearch } from "react-icons/ci";
-import { CiMail } from "react-icons/ci";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-
+import { MdOutlineKeyboardArrowDown,  MdOutlineKeyboardArrowUp} from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
+import { useState } from "react";
+
 
 
 
 const Navbar = ({page, OpenSidebar}) => {
 
-
+  const [toggleAcc, setToggleAcc] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  
+  const renderAccount = () => {
+    setToggleAcc(!toggleAcc)
+    setIsActive(!isActive)
+  }
 
   return (
-    <header className=" z-10 top-0 w-full flex  items-center justify-between bg-[#fcfcfc] shadow-md p-2 lg: py-4">
+    <header className="fixed z-10 top-0 w-full flex  items-center justify-between bg-[#fcfcfc] shadow-md p-2 lg: py-4">
      <div className="flex items-center font-semibold gap-2 justify-between "> 
      <h2 className="  text-[14px] font-bold text-nowrap hidden lg:block text-[18px]"> 🧑🏿‍🍳 Mr <span className="text-[#f18056]">Cakes</span></h2>
       <IoMenu className="cursor-pointer  semibold text-[24px] lg:hidden" onClick={OpenSidebar}/>
@@ -29,12 +35,25 @@ const Navbar = ({page, OpenSidebar}) => {
      </label>
      <div className="flex gap-1 text-blue-500 text-[16px] items-center">
            <CiSearch className=' lg:hidden'/>
-            <CiMail />
             <IoIosNotificationsOutline />
         <div className="flex gap-1  items-center">
-             <CgProfile/>
-            <p className="text-nowrap ">Rhonda Rhodes</p>
-            <MdOutlineKeyboardArrowDown/>
+            <div className="cursor-pointer text-nowrap " onClick={() => renderAccount()}>
+               <div className="flex gap-1 items-center">
+               <CgProfile />    
+               <p>Rhonda Rhodes</p>
+               {
+                isActive ? <MdOutlineKeyboardArrowDown/>
+                         :  <MdOutlineKeyboardArrowUp/>
+               }          
+               </div>
+              <div className={toggleAcc? "hidden lg:hidden" : 'list-none absolute p-1 right-2 w-[14%]  text-[14px] bg-[#e5e5e5]'}>
+                <div className="flex items-center gap-1">
+                  <CgProfile/>
+                  <li>Logout</li>
+                </div>
+              </div>
+            </div>
+
         </div>
      </div>
     </header>
