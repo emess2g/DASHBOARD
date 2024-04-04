@@ -10,7 +10,7 @@ import { HiUserGroup } from "react-icons/hi2";
 
 import { NavLink } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({openSidebarToggle}) => {
   const data = [
     {
       id: 1,
@@ -64,18 +64,18 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside id='sidebar'>
-      <div className="fixed bg-[#fcfcfc] h-[100%] ">
+    <aside id='sidebar' >
+      <div className={openSidebarToggle ? "hidden  lg:block fixed  z-10 mt-10 bg-[#fcfcfc] h-[100%]" : ' fixed  z-10  bg-[#fcfcfc] h-[100%] lg: block' }>
 
         {data.map((val) => (
           <NavLink to={val.link}>
-            <ul className="flex flex-col text-[15px] font-semibold text-nowrap" key={val.id}>
+            <ul className="flex flex-col text-[14px] font-semibold text-nowrap" key={val.id}>
               <div className="flex items-center justify-between  py-4  px-2">
                  <div className="flex items-center gap-1">
-                 <p className="font-bold text-[20px] ">{val.icon}</p>
-                <h1>{val.name}</h1>
+                 <p className="font-bold text-[14px]">{val.icon}</p>
+                <h1 className="text-[14px]">{val.name}</h1>
                  </div>
-                <p  className="font-bold text-[20px]">{val.icon2}</p>
+                <p  className="font-bold text-[16px]">{val.icon2}</p>
               </div>
             </ul>
           </NavLink>

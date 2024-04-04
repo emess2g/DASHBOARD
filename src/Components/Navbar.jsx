@@ -3,32 +3,35 @@ import { CiMail } from "react-icons/ci";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { CiMenuBurger } from "react-icons/ci";
+
+
+const Navbar = ({page, OpenSidebar}) => {
 
 
 
-
-
-const Navbar = ({page}) => {
   return (
-    <header className=" top-0 w-full flex  items-center justify-between py-4 px-6 bg-[#fcfcfc] shadow-md ">
-     <div className="flex items-center font-semibold gap-4 justify-between w-[25%]"> 
-     <h2 className="text-[20px] font-bold text-nowrap"> 🧑🏿‍🍳 Mr <span className="text-[#f18056]">Cakes</span></h2>
-     <h1 className="text-[18px] opensans">{page}</h1>
+    <header className=" z-10 top-0 w-full flex  items-center justify-between bg-[#fcfcfc] shadow-md p-2 lg: py-4">
+     <div className="flex items-center font-semibold gap-2 justify-between "> 
+     <h2 className="  text-[14px] font-bold text-nowrap hidden lg:block text-[18px]"> 🧑🏿‍🍳 Mr <span className="text-[#f18056]">Cakes</span></h2>
+      <CiMenuBurger className="cursor-pointer lg:hidden" onClick={OpenSidebar}/>
+     <h1 className="text-[14px] opensans hidden lg:block text-[18px]  ">{page}</h1>
      </div>
-     <label className="flex gap-1 items-center border-[#8e8da1] border-2 rounded-xl py-1 px-2">
-       <CiSearch className='text-[14px]'/>
+     <label className="flex  gap-1 items-center justify-center hidden  border-[#8e8da1] border-2 rounded-xl px-2 lg:block w-[30%]" >
+       <CiSearch className='text-[12px] lg:text-[16px]'/>
        <input type="text" 
        aria-label="search"
        placeholder="search"
-       className="bg-[transparent] placeholder:text-[#797e93] focus:outline-none"
+       className="bg-[transparent] placeholder:text-[#797e93] focus:outline-none hidden text-[12px] lg:text-[16px]"
        />
      </label>
-     <div className="flex gap-3 text-[16px] items-center">
+     <div className="flex gap-1 text-blue-500 text-[16px] items-center">
+           <CiSearch className=' lg:hidden'/>
             <CiMail />
             <IoIosNotificationsOutline />
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-1  items-center">
              <CgProfile/>
-            <p className="">Rhonda Rhodes</p>
+            <p className="text-nowrap ">Rhonda Rhodes</p>
             <MdOutlineKeyboardArrowDown/>
         </div>
      </div>
