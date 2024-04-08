@@ -11,9 +11,9 @@ import { MdVolunteerActivism } from "react-icons/md";
 
 
 
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Sidebar = ({openSidebarToggle,  OpenSidebar }) => {
+const Sidebar = ({  OpenSidebar }) => {
   const data = [
     {
       id: 1,
@@ -74,21 +74,20 @@ const Sidebar = ({openSidebarToggle,  OpenSidebar }) => {
   }
 
   return (
-    <aside id='sidebar' >
-      <div className={openSidebarToggle ? "hidden  lg:block fixed  z-10 mt-10 bg-[#fcfcfc] h-[100%]" : ' fixed  z-10  bg-[#fcfcfc] h-[100%] lg: fixed block mt-10' }>
-
+    <aside className='fixed z-10 flex-row mt-10'  >
+      <div  >
         {data.map((val) => (
-          <NavLink to={val.link} onClick={() => handleHidden()}>
+          <Link to={val.link} onClick={() => handleHidden()}>
             <ul className="flex flex-col text-[14px] font-semibold text-nowrap" key={val.id}>
               <div className="flex items-center justify-between  py-4  px-2">
                  <div className="flex items-center gap-1">
                  <p className="font-bold text-[14px]">{val.icon}</p>
-                <h1 className="text-[14px]">{val.name}</h1>
+                <h1 className="text-[18px]">{val.name}</h1>
                  </div>
                 <p  className="font-bold text-[16px]">{val.icon2}</p>
               </div>
             </ul>
-          </NavLink>
+          </Link>
         ))}
       </div>
     </aside>

@@ -19,7 +19,7 @@ const Navbar = ({page, OpenSidebar}) => {
   }
 
   return (
-    <header className="fixed z-10 top-0 w-full flex  items-center justify-between bg-[#fcfcfc] shadow-md p-2 lg: py-4">
+    <header className="fixed z-10 top-0 w-full flex  items-center justify-between bg-[#fcfcfc] p-2 lg: py-4">
      <div className="flex items-center font-semibold gap-2 justify-between "> 
      <h2 className="  text-[14px] font-bold text-nowrap hidden lg:block text-[18px]"> 🧑🏿‍🍳 Mr <span className="text-[#f18056]">Cakes</span></h2>
       <IoMenu className="cursor-pointer  semibold text-[24px] lg:hidden" onClick={OpenSidebar}/>
@@ -42,8 +42,8 @@ const Navbar = ({page, OpenSidebar}) => {
                <CgProfile />    
                <p>Rhonda Rhodes</p>
                {
-                isActive ? <MdOutlineKeyboardArrowDown/>
-                         :  <MdOutlineKeyboardArrowUp/>
+                isActive ? <MdOutlineKeyboardArrowUp/>
+                         :  <MdOutlineKeyboardArrowDown/>
                }          
                </div>
               <div className={toggleAcc? "hidden lg:hidden" : 'list-none absolute p-1 right-2 w-[14%]  text-[14px] bg-[#e5e5e5]'}>
