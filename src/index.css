@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 #main {
-    width: calc(100% -170px);
-    margin-left: 170px;
-    margin-top: 59px;
+    width: calc(100% -180px);
+    margin-left: 180px;
+    margin-top: 69px;
 }
 
-/* top-10 absolute mt-10 mx-5 w-[80%] p-4 */
+.dataTables_scrollBody {
+    overflow-y: hidden!important;
+ }

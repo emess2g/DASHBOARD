@@ -4,7 +4,7 @@ import BoardData from "../data/BoardData";
 const Dashboard = () => {
 
   return (
-    <div id="main" className="grid auto-rows-auto gap-2">
+    <div id="main" className="m-4 flex flex-col justify-between auto-rows-auto gap-4">
      <BoardTopCard/>
       <BoardData/>
     </div>

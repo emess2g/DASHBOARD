@@ -23,6 +23,8 @@ const customStyles = {
 	},
 };
 
+
+
 // createTheme('solarized', {
 //     text: {
 //       primary: '#268bd2',
@@ -112,6 +114,42 @@ const customStyles = {
             pickupDate: "March 15, 2024",
             status: "Pending",
             details: "view"
+        },
+        {
+            name: "Siddiq Mohammed",
+            contact: 233400000,
+            location: "Norway",
+            item: "MacBook Pro",
+            pickupDate: "March 15, 2024",
+            status: "Pending",
+            details: "view"
+        },
+        {
+            name: "Siddiq Mohammed",
+            contact: 233400000,
+            location: "Norway",
+            item: "MacBook Pro",
+            pickupDate: "March 15, 2024",
+            status: "Pending",
+            details: "view"
+        },
+        {
+            name: "Siddiq Mohammed",
+            contact: 233400000,
+            location: "Norway",
+            item: "MacBook Pro",
+            pickupDate: "March 15, 2024",
+            status: "Pending",
+            details: "view"
+        },
+        {
+            name: "Siddiq Mohammed",
+            contact: 233400000,
+            location: "Norway",
+            item: "MacBook Pro",
+            pickupDate: "March 15, 2024",
+            status: "Pending",
+            details: "view"
         }
     ]
 
@@ -119,6 +157,7 @@ const customStyles = {
   return (
     <div className=''>
       <DataTable 
+      className='dataTables_scrollBody'
       columns={columns} 
       data={rows}
       customStyles={customStyles}

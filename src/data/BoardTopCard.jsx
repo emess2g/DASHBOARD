@@ -36,20 +36,20 @@ const BoardTopCard = () => {
     
   return (
     <div>
-         <div className="flex gap-2 ">
+         <div className="flex gap-2 justify-between text-[16px] text-[#fff]">
         {highlightData.map((data) => (
           <div
-            className={`flex text-[#fff] justify-between  text-[14px]  ${data.color} rounded-lg gap-4 p-2
+            className={`flex justify-between ${data.color} rounded-lg gap-4 p-2
             lg: w-[30%]
             `}
             key={data.id}
           >
-            <div className="  items-center gap-4 text-nowrap ">
-              <p>{data.name}</p>
+            <div className=" flex flex-col   gap-2 text-nowrap ">
+              <p className='text-[14px]'>{data.name}</p>
               <p>{data.number}</p>
             </div>
             <div className=" text-[#111]  bg-[#f7f7ff] p-4 rounded-[50%]">
-              <p className="lg:text-[18px]">{data.icon}</p>
+              <p className="text-[1.5rem]">{data.icon}</p>
             </div>
           </div>
         ))}

@@ -17,8 +17,8 @@ function App() {
   
    <BrowserRouter>
      <Navbar  page='Dashboard' OpenSidebar={OpenSidebar} />
-      <div className="flex w-full bg-blue-200  ">
-        <div className="h-screen  top-0 bg-green-500">
+      <div className="flex w-full  ">
+        <div className="h-screen  top-0 ">
         <Sidebar  openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
         </div>
       <div className="flex-1">
