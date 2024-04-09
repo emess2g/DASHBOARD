@@ -1,4 +1,4 @@
-import Navbar from "./Components/Navbar.jsx"
+import Navbar from "./Components/Header.jsx"
 import Sidebar from "./Components/Sidebar.jsx"
 import { BrowserRouter, Routes, Route  } from "react-router-dom"
 import { useState } from "react"
@@ -18,7 +18,7 @@ function App() {
    <BrowserRouter>
      <Navbar  page='Dashboard' OpenSidebar={OpenSidebar} />
       <div className="flex w-full  ">
-        <div className="h-screen  top-0 ">
+        <div className="h-screen  ">
         <Sidebar  openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
         </div>
       <div className="flex-1">

@@ -40,9 +40,9 @@ const BoardTopCard = () => {
         {highlightData.map((data) => (
           <div
             className={`flex justify-between ${data.color} rounded-lg gap-4 p-2
-            lg: w-[30%]
+            lg:w-[30%] h-full
             `}
-            key={data.id}
+            key={data.id} 
           >
             <div className=" flex flex-col   gap-2 text-nowrap ">
               <p className='text-[14px]'>{data.name}</p>

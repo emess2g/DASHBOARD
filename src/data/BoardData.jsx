@@ -157,7 +157,7 @@ const customStyles = {
   return (
     <div className=''>
       <DataTable 
-      className='dataTables_scrollBody'
+      className='dataTables_scrollBody z-0'
       columns={columns} 
       data={rows}
       customStyles={customStyles}
