@@ -4,21 +4,31 @@ import DataTable, {createTheme} from 'react-data-table-component'
 const BoardData = () => {
     //  Internally, customStyles will deep merges your customStyles with the default styling.
 const customStyles = {
+    header: {
+        style: {
+            'font-size': '18px',
+            'padding' : '0px',
+            'margin': '0'
+        }
+    },
 	rows: {
 		style: {
-			minHeight: '72px', // override the row height
+			minHeight: '52px', // override the row height
 		},
 	},
 	headCells: {
 		style: {
-			paddingLeft: '5px', // override the cell padding for head cells
-			paddingRight: '5px',
+            padding: '0px',
+			// paddingLeft: '5px', // override the cell padding for head cells
+			// paddingRight: '5px',
 		},
 	},
 	cells: {
 		style: {
-			paddingLeft: '5px', // override the cell padding for data cells
-			paddingRight: '5px',
+            padding: '0px',
+			// paddingLeft: '5px', // override the cell padding for data cells
+			// paddingRight: '5px',
+            // border : '1px solid'
 		}
 	},
 };
