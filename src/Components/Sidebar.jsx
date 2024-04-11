@@ -78,7 +78,7 @@ const Sidebar = ({  OpenSidebar }) => {
       <div className="" >
         {data.map((val) => (
           <Link to={val.link} onClick={() => handleHidden()}>
-            <ul className="flex flex-col text-[12px]  text-nowrap hover:bg-[#555] hover:text-white" key={val.id}>
+            <ul className="flex flex-col text-[12px]  text-nowrap hover:bg-[#555] " key={val.id}>
               <div className="flex items-center justify-between gap-2 py-4  px-2">
                  <div className="flex items-center gap-2">
                  <p className="font-bold text-[16px]">{val.icon}</p>

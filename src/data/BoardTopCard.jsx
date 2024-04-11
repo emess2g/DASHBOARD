@@ -41,7 +41,7 @@ const BoardTopCard = () => {
           <div
             id='topCard'
             className={`flex justify-between shadow-md ${data.color} rounded-lg gap-4 p-2
-            w-[30%] h-full lx: 
+            w-[30%] h-full : 
             `}
             key={data.id} 
           >

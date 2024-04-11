@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DataTable, {createTheme} from 'react-data-table-component'
+import DetailModal from './DetailModal';
+
 
 const BoardData = () => {
+    const [isOpen, setIsOpen] = useState(false);
     //  Internally, customStyles will deep merges your customStyles with the default styling.
 const customStyles = {
+    bodyStyle: {
+        style: {
+           background: 'red'
+        }
+    },
     header: {
         style: {
             'font-size': '18px',
@@ -33,30 +41,6 @@ const customStyles = {
 	},
 };
 
-
-
-// createTheme('solarized', {
-//     text: {
-//       primary: '#268bd2',
-//       secondary: '#2aa198',
-//     },
-//     background: {
-//       default: '#002b36',
-//     },
-//     context: {
-//       background: '#cb4b16',
-//       text: '#FFFFFF',
-//     },
-//     divider: {
-//       default: '#073642',
-//     },
-//     action: {
-//       button: 'rgba(0,0,0,.54)',
-//       hover: 'rgba(0,0,0,.08)',
-//       disabled: 'rgba(0,0,0,.12)',
-//     },
-//   }, 'dark');
-
     const columns = [
         {
             name: "Sender Name",
@@ -80,11 +64,15 @@ const customStyles = {
         },
         {
             name: "Status",
-            selector: row => row.status
+            selector: row => row.status    
         },       
         {
             name: " Details",
-            selector: row => row.details
+            selector: row =>  <button
+             onClick={() => setIsOpen(true)} 
+             className='bg-red-400 p-2 rounded-md text-white' >
+             {row.details}
+             </button>
         }
     ];
 
@@ -163,7 +151,6 @@ const customStyles = {
         }
     ]
 
-
   return (
     <div className=''>
       <DataTable 
@@ -171,10 +158,10 @@ const customStyles = {
       columns={columns} 
       data={rows}
       customStyles={customStyles}
-    //   theme={'solarized'}
       fixedHeader
       title="Incoming Donations."
       />
+      {isOpen && <DetailModal setIsOpen={setIsOpen} />}
     </div>
   )
 }
