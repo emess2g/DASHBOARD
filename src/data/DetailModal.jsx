@@ -1,5 +1,6 @@
 import React from 'react'
 import DataTable, {createTheme} from 'react-data-table-component'
+import { CgCloseO } from "react-icons/cg";
 
 const DetailModal = ({setIsOpen}) => {
         //  Internally, customStyles will deep merges your customStyles with the default styling.
@@ -89,9 +90,11 @@ const customStyles = {
   return (
     <div>
     <div id='main' className=' absolute  text-center w-[70%] m-5 p-2 right-[3rem] top-[5rem] bg-[#555] xl: top-[8rem] xl:right-[5rem]'>
-    <div className='flex justify-between'> 
+    <div className='flex justify-between text-white'> 
      <h1>Detail Modal </h1> 
-     <button onClick={() => setIsOpen(false)}>X</button>
+     <button onClick={() => setIsOpen(false)}>
+        <CgCloseO/>
+     </button>
      </div>
       <DataTable 
       className='dataTables_scrollBody '
