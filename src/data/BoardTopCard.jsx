@@ -39,8 +39,8 @@ const BoardTopCard = () => {
          <div className="flex gap-2 justify-between text-[16px] text-[#fff]">
         {highlightData.map((data) => (
           <div
-            className={`flex justify-between ${data.color} rounded-lg gap-4 p-2
-            lg:w-[30%] h-full
+            className={`flex justify-between shadow-md ${data.color} rounded-lg gap-4 p-2
+            w-[30%] h-full
             `}
             key={data.id} 
           >

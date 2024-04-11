@@ -19,22 +19,22 @@ const Navbar = ({page, OpenSidebar}) => {
   }
 
   return (
-    <header className="fixed z-10  top-0 w-full flex  items-center justify-between shadow-md bg-[#fcfcfc] p-2 ">
+    <header className="fixed z-10  top-0 w-full flex  items-center justify-between bg-blue-00 shadow-md bg-[#fcfcfc] p-2 ">
      <div className="flex items-center font-semibold gap-6 justify-between "> 
-     <h2 className="  text-[14px] font-bold text-nowrap  text-[18px]"> 🧑🏿‍🍳 Mr <span className="text-[#f18056]">Cakes</span></h2>
+     <h2 className="  text-[14px] text-[#f18056] font-bold text-nowrap  text-[18px]"> Donations</h2>
       <IoMenu className="cursor-pointer  semibold text-[24px] lg:hidden" onClick={OpenSidebar}/>
-     <h1 className="text-[14px] opensans  text-[18px]  ">{page}</h1>
+     <h1 className="text-[14px] ml-12 opensans  text-[18px]  ">{page}</h1>
      </div>
-     <label className="flex gap-1 items-center border-[#8e8da1] border-2 rounded-xl p-1 w-[30%]" >
+   
+     <div className="flex  gap-2 text-[16px] items-center  justify-between bg-white">
+     {/* <label className="flex gap-1 items-center border-[#8e8da1] border-2 rounded-xl " >
        <CiSearch className='text-[14px] '/>
        <input type="text" 
        aria-label="search"
        placeholder="search..."
-       className="bg-[transparent] placeholder:text-[#797e93] focus:outline-none text-[12px] lg:text-[16px] lg:visible"
+       className="bg-[transparent] placeholder:text-[#797e93] focus:outline-none w-[15%]  text-[12px] lg:text-[16px] lg:visible"
        />
-     </label>
-     <div className="flex gap-1 text-blue-500 text-[16px] items-center">
-           <CiSearch className=' lg:hidden'/>
+     </label> */}
             <IoIosNotificationsOutline className="text-[18px]" />
         <div className="flex gap-1  items-center">
             <div className="cursor-pointer text-nowrap " onClick={() => renderAccount()}>

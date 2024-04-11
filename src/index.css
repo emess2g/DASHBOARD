@@ -5,9 +5,10 @@
 #main {
     width: calc(100% -180px);
     margin-left: 180px;
-    margin-top: 69px;
+    margin-top: 55px;
 }
 
 .dataTables_scrollBody {
     overflow-y: hidden!important;
+   
  }

@@ -74,7 +74,7 @@ const Sidebar = ({  OpenSidebar }) => {
   }
 
   return (
-    <aside className='bg-[#fcfcfc] shadow-md fixed h-full z-10 flex-row mt-12 '  >
+    <aside className='bg-[#fcfcfc] shadow-md fixed h-full z-10 flex-row mt-10 '  >
       <div className="" >
         {data.map((val) => (
           <Link to={val.link} onClick={() => handleHidden()}>
