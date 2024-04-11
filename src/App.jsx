@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route  } from "react-router-dom"
 import { useState } from "react"
 import Dashboard from "./Pages/Dashboard.jsx"
 import OrderHistory from "./Pages/Alldonations.jsx"
+import Allusers from "./Pages/Allusers.jsx"
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(true)
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard/>} exact />
         <Route path="/alldonations" element={<OrderHistory/>} />
+        <Route path="/allusers" element={<Allusers/>} />
       </Routes>
       </div>
       </div>

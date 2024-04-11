@@ -9,7 +9,7 @@ const customStyles = {
       style: {
        fontSize: '16px',
        margin: '0px',
-       background: 'red',
+       background: '',
       },
     },
       rows: {
@@ -89,7 +89,7 @@ const customStyles = {
 
   return (
     <div>
-    <div id='main' className=' absolute  text-center w-[70%] m-5 p-2 right-[3rem] top-[5rem] bg-[#555] xl: top-[8rem] xl:right-[5rem]'>
+    <div id='main' className=' fixed absolute shadow-md rounded  text-center w-[70%] m-5 p-2 right-[3rem] top-[5rem] bg-[#555] xl: top-[8rem] xl:right-[5rem]'>
     <div className='flex justify-between text-white'> 
      <h1>Detail Modal </h1> 
      <button onClick={() => setIsOpen(false)}>
@@ -103,8 +103,11 @@ const customStyles = {
       customStyles={customStyles}
       // theme={'solarized'}
       fixedHeader
-      // title="All Dontations"
+      title="Donor Details"
       />
+      <div className="bg-blue-400 w-full p-4 text-white font-semibold">
+        <p>Pending</p>
+      </div>
     </div>
      
     </div>
