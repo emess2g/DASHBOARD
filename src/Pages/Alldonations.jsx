@@ -1,18 +1,12 @@
-
-
-// const OrderHistory = () => {
-//   return (
-//     <div id="main" >
-//       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum libero non, laboriosam ad blanditiis, repellat totam cupiditate harum voluptates cumque corrupti error, consequatur eius similique. Velit neque doloremque facilis, adipisci aliquid ea fugiat? Nostrum aliquam voluptatum a natus animi eum!</p>
-//     </div>
-//   )
-// }
-
-// export default OrderHistory;
-import React from 'react'
+import React, {useState} from 'react'
 import DataTable, {createTheme} from 'react-data-table-component'
+import AddDonation from './AddDonation'
+import { FiEdit } from 'react-icons/fi'
 
 const Alldonations = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+
     //  Internally, customStyles will deep merges your customStyles with the default styling.
 const customStyles = {
   header: {
@@ -77,21 +71,21 @@ const customStyles = {
             name: "Siddiq Mohammed",
             location: "Norway",
             item: "MacBook Pro",
-            status: "🕢",
+            status: <FiEdit className='text-[18px]'/>,
             details: "view"
         },
         {
             name: "Siddiq Mohammed",
             location: "Norway",
             item: "MacBook Pro",
-            status: "🕢",
+            status: <FiEdit className='text-[18px]'/>,
             details: "view"
         },
         {
             name: "Siddiq Mohammed",
             location: "Norway",
             item: "MacBook Pro",
-            status: "🕢",
+            status: <FiEdit className='text-[18px]'/>,
             details: "view"
         }
     ]
@@ -99,6 +93,11 @@ const customStyles = {
 
   return (
     <div id='main' className='m-4'>
+        <div className="flex justify-end items-end">
+        <button className='underline'
+        onClick={() => setIsOpen(true)}
+        >Add Donation</button>
+        </div>
       <DataTable 
       className='dataTables_scrollBody '
       columns={columns} 
@@ -108,6 +107,7 @@ const customStyles = {
       fixedHeader
       // title="All Dontations"
       />
+      {isOpen && <AddDonation setIsOpen={setIsOpen} />}
     </div>
   )
 }

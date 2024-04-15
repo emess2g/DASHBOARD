@@ -1,6 +1,7 @@
 import React from 'react'
 import DataTable, {createTheme} from 'react-data-table-component'
 import { CgCloseO } from "react-icons/cg";
+import { FiEdit } from 'react-icons/fi'
 
 const DetailModal = ({setIsOpen}) => {
         //  Internally, customStyles will deep merges your customStyles with the default styling.
@@ -67,21 +68,21 @@ const customStyles = {
               name: "Siddiq Mohammed",
               location: "Norway",
               item: "MacBook Pro",
-              status: "🕢",
+              status: <FiEdit/>,
               details: "view"
           },
           {
               name: "Siddiq Mohammed",
               location: "Norway",
               item: "MacBook Pro",
-              status: "🕢",
+              status: <FiEdit/>,
               details: "view"
           },
           {
               name: "Siddiq Mohammed",
               location: "Norway",
               item: "MacBook Pro",
-              status: "🕢",
+              status: <FiEdit/>,
               details: "view"
           }
       ]
@@ -89,7 +90,7 @@ const customStyles = {
 
   return (
     <div>
-    <div id='main' className=' fixed absolute shadow-md rounded  text-center w-[70%] m-5 p-2 right-[3rem] top-[5rem] bg-[#555] xl: top-[8rem] xl:right-[5rem]'>
+    <div id='main' className=' fixed absolute shadow-md   text-center w-[70%] m-5 p-2 right-[3rem] top-[5rem] bg-[#555] xl: top-[8rem] xl:right-[5rem]'>
     <div className='flex justify-between text-white'> 
      <h1>Detail Modal </h1> 
      <button onClick={() => setIsOpen(false)}>
@@ -97,15 +98,15 @@ const customStyles = {
      </button>
      </div>
       <DataTable 
-      className='dataTables_scrollBody '
+      className='dataTables_scrollBody  '
       columns={columns} 
       data={rows}
       customStyles={customStyles}
       // theme={'solarized'}
       fixedHeader
-      title="Donor Details"
+      // title="Donor Details"
       />
-      <div className="bg-blue-400 w-full p-4 text-white font-semibold">
+      <div className="bg-blue-400 w-full p-2 text-white font-semibold">
         <p>Pending</p>
       </div>
     </div>

@@ -75,7 +75,7 @@ const customStyles = {
   
 
   return (
-    <div id='main' className='m-5'>
+    <div id='main' className='m-5'> 
         <DataTable 
       className='dataTables_scrollBody '
       data={rows}
