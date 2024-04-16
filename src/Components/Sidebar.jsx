@@ -75,14 +75,14 @@ const Sidebar = ({  OpenSidebar }) => {
 
   return (
     <aside className='bg-[#fcfcfc] shadow-md fixed h-full z-10 flex-row mt-10 '  >
-      <div className="" >
+      <div className="px-1 " >
         {data.map((val) => (
-          <Link to={val.link} onClick={() => handleHidden()}>
-            <ul className="flex flex-col text-[12px]  text-nowrap hover:bg-[#555] " key={val.id}>
+          <Link to={val.link} onClick={() => handleHidden()} >
+            <ul className="flex flex-col text-nowrap  sidebar-hover sidebar-active" key={val.id}>
               <div className="flex items-center justify-between gap-2 py-4  px-2">
-                 <div className="flex items-center gap-2">
-                 <p className="font-bold text-[16px]">{val.icon}</p>
-                <h1 className="text-[18px]">{val.name}</h1>
+                 <div className="flex items-center gap-2 text-[16px] font-semibold">
+                 <p >{val.icon}</p>
+                 <h1 >{val.name}</h1>
                  </div>
                 <p  className="font-bold text-[16px]">{val.icon2}</p>
               </div>
