@@ -27,6 +27,7 @@ const customStyles = {
 	headCells: {
 		style: {
       fontSize: '16px',
+      zIndex : 0,
 			paddingLeft: '5px', // override the cell padding for head cells
 			paddingRight: '5px',
       // background: 'red',
