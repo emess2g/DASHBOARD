@@ -6,6 +6,10 @@ import { useState } from "react"
 import Dashboard from "./Pages/Dashboard.jsx"
 import OrderHistory from "./Pages/Alldonations.jsx"
 import Allusers from "./Pages/Allusers.jsx"
+import Campaigns from "./Pages/Campaigns.jsx"
+import Events from "./Pages/Events.jsx"
+import Blog from "./Pages/Blog.jsx"
+import Volunteers from "./Pages/Volunteers.jsx"
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(true)
@@ -27,6 +31,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard/>} exact />
         <Route path="/alldonations" element={<OrderHistory/>} />
+        <Route path="/campaigns" element={<Campaigns/>} />
+        <Route path="/events" element={<Events/>} />
+        <Route path="/blog" element={<Blog/>} />
+        <Route path="/volunteers" element={<Volunteers/>} />
         <Route path="/allusers" element={<Allusers/>} />
       </Routes>
       </div>

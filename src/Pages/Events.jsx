@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
 import DataTable, {createTheme} from 'react-data-table-component'
+import AddModal from './AddModal'
 import { FiEdit } from 'react-icons/fi'
 
-const Alldonations = () => {
+const Events = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
 
     //  Internally, customStyles will deep merges your customStyles with the default styling.
 const customStyles = {
@@ -45,11 +48,7 @@ const customStyles = {
         {
             name: "Sender Name",
             selector: row => row.name
-        },      
-        {
-            name: "Contact",
-            selector: row => row.contact
-        },  
+        },
         {
             name: "Location",
             selector: row => row.location
@@ -61,7 +60,11 @@ const customStyles = {
         {
           name: " Details",
           selector: row => row.details
-        } 
+        },
+        {
+            name: "Update",
+            selector: row => row.status
+        }     
     ];
 
         const rows = [
@@ -69,21 +72,21 @@ const customStyles = {
             name: "Siddiq Mohammed",
             location: "Norway",
             item: "MacBook Pro",
-            contact: '23355000000',
+            status: <FiEdit className='text-[18px]'/>,
             details: "view"
         },
         {
             name: "Siddiq Mohammed",
             location: "Norway",
             item: "MacBook Pro",
-            contact: '23355000000',
+            status: <FiEdit className='text-[18px]'/>,
             details: "view"
         },
         {
             name: "Siddiq Mohammed",
             location: "Norway",
             item: "MacBook Pro",
-            contact: '23355000000',
+            status: <FiEdit className='text-[18px]'/>,
             details: "view"
         }
     ]
@@ -91,6 +94,11 @@ const customStyles = {
 
   return (
     <div id='main' className='m-4'>
+        <div className="flex justify-end items-end">
+        <button className='underline'
+        onClick={() => setIsOpen(true)}
+        >Add Events</button>
+        </div>
       <DataTable 
       className='dataTables_scrollBody '
       columns={columns} 
@@ -100,9 +108,9 @@ const customStyles = {
       fixedHeader
       // title="All Dontations"
       />
+      {isOpen && <AddModal setIsOpen={setIsOpen} />}
     </div>
   )
 }
 
-export default Alldonations
-
+export default Events
