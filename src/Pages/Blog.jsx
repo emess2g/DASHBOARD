@@ -46,49 +46,35 @@ const customStyles = {
 
     const columns = [
         {
-            name: "Sender Name",
-            selector: row => row.name
+            name: "Author",
+            selector: row => row.author
         },
         {
-            name: "Location",
-            selector: row => row.location
+            name: "Body",
+            selector: row => row.body
         },
         {
-            name: "Item(s)",
-            selector: row => row.item
+            name: "Date",
+            selector: row => row.date_created
         },
         {
-          name: " Details",
-          selector: row => row.details
+          name: "Image",
+          selector: row => row.image
         },
         {
-            name: "Update",
-            selector: row => row.status
+            name: "Title",
+            selector: row => row.title
         }     
     ];
 
         const rows = [
         {
-            name: "Siddiq Mohammed",
-            location: "Norway",
-            item: "MacBook Pro",
-            status: <FiEdit className='text-[18px]'/>,
-            details: "view"
+            author: "Siddiq Mohammed",
+            body: "fgifefpojfwpojvkvlkadfewafpoewpojewpoijewf",
+            date_created: "May 21, 2020",
+            image:"💟" ,
+            title: "Vaccination"
         },
-        {
-            name: "Siddiq Mohammed",
-            location: "Norway",
-            item: "MacBook Pro",
-            status: <FiEdit className='text-[18px]'/>,
-            details: "view"
-        },
-        {
-            name: "Siddiq Mohammed",
-            location: "Norway",
-            item: "MacBook Pro",
-            status: <FiEdit className='text-[18px]'/>,
-            details: "view"
-        }
     ]
 
 
