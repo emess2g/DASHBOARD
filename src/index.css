@@ -17,6 +17,7 @@ html{
 #main {
     width: calc(100% -180px);
     margin-left: 180px;
+    margin-right: 10px;
     margin-top: 55px;
 }
 
@@ -30,14 +31,14 @@ html{
  /* sidebar hover */
 
 .sidebar-hover:hover {
-    background-color: #f18056;
+    background-color: #3fb48a;
     color: #f1f1f1; 
     border-radius: .5rem;
     
 }
 
-.sidebar-active:active {
-    background-color: #ec8966;
+.sidebar-active:focus-within {
+    background-color: #3fb48a;
     color: #f1f1f1; 
     
 }

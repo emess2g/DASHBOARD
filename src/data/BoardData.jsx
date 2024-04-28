@@ -70,7 +70,7 @@ const customStyles = {
             name: " Details",
             selector: row =>  <button
              onClick={() => setIsOpen(true)} 
-             className='bg-red-400 p-2 rounded-md text-white' >
+             className='bg-[#3fb48a] p-2 rounded-md text-white' >
              {row.details}
              </button>
         }

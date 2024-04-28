@@ -10,7 +10,7 @@ const AddModal = ({setIsOpen}) => {
      <p>Modal</p>
       <CgCloseO onClick={() => setIsOpen(false)}/>
      </div>
-     <label className="flex gap-2  flex-col focus:outline-none">
+     {/* <label className="flex gap-2  flex-col focus:outline-none">
         <input type="text"
         required
         className='rounded   p-1 '
@@ -24,20 +24,22 @@ const AddModal = ({setIsOpen}) => {
          <textarea name="" id="" cols="10" rows="10" placeholder='Donor Description'
          className='p-1 h-[80px] '
          ></textarea>
-     </label>
-     <div className="flex  flex-col gap-1">
+     </label> */}
+     {/* <div className="flex  flex-col gap-1">
         <p className='underline inline-block'>update image</p>
         <div className='flex flex-col items-center justify-center text-center  w-[28%] h-[120px] shadow bg-[#fff]'>
             <FiUpload/>
             <p>img</p>
         </div>
-     </div>
-     <button 
+     </div> */}
+     {/* <button 
      type='submit'
      onClick={() => setIsOpen(false)}
-     className='bg-[orange] text-white p-2 font-semibold rounded shadow-lg'>Upload</button>
+     className='bg-[orange] text-white p-2 font-semibold rounded shadow-lg'>
+      Upload
+     </button> */}
     </div>
-
+ 
     </div>
   )
 }

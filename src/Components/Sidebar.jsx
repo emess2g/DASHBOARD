@@ -81,7 +81,7 @@ const Sidebar = ({  OpenSidebar }) => {
             <ul className="flex flex-col text-nowrap  sidebar-hover sidebar-active" key={val.id}>
               <div className="flex items-center justify-between gap-2 py-4  px-2">
                  <div className="flex items-center gap-2 text-[16px] font-semibold">
-                 <p >{val.icon}</p>
+                 <p className="" >{val.icon}</p>
                  <h1 >{val.name}</h1>
                  </div>
                 <p  className="font-bold text-[16px]">{val.icon2}</p>

@@ -21,7 +21,7 @@ const Navbar = ({page, OpenSidebar}) => {
   return (
     <header className="fixed z-[99] top-0 w-full flex  items-center justify-between bg-blue-00 shadow-md bg-[#fcfcfc] p-2 ">
      <div className="flex items-center font-semibold gap-6 justify-between "> 
-     <h2 className="  text-[14px] text-[#f18056] font-bold text-nowrap  text-[18px]"> Donations</h2>
+     <h2 className="  text-[14px] text-[#3fb48a] font-bold text-nowrap  text-[18px]"> Donations</h2>
       <IoMenu className="cursor-pointer  semibold text-[24px] lg:hidden" onClick={OpenSidebar}/>
      <h1 className="text-[14px] ml-12 opensans  text-[18px]  ">{page}</h1>
      </div>
