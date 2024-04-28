@@ -3,7 +3,6 @@ function Table({ tableData }) {
       <table className="table-fixed w-full ">
         <thead>
           <tr>
-            <th>Id</th>
             <th>Title</th>
             <th>Body</th>
             <th>Photo</th>
@@ -12,14 +11,12 @@ function Table({ tableData }) {
             <th>Date</th>
             <th>Organizer</th>
             <th>Profile Photo</th>
-            <th>Reference</th>
           </tr>
         </thead>
         <tbody>
           {tableData.map((data, index) => {
             return (
               <tr key={index}>
-                <td>{index + 1}</td>
                 <td>{data.title}</td>
                 <td>{data.body}</td>
                 <td> {data.profileUrl}</td>
